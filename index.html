@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy 2024</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="acm.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Protest+Strike&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="clock.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+    <div style="display: flex; color:  rgb(26, 37, 55); ">
+  <a href="https://www.upesacmw.org/" class="active"><img src="upesWhite.png" class="logo"></a>
+  <a href="https://www.upesacmw.org/" class="active"><img src="acmacm_w.png" class="logo2"></a>
+  </div>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks" style="transition: 1s ease-in-out;">
+    <a href="#About">About</a>
+    <a href="#Events">Events</a>
+    <a href="#Sponsors">Sponsors</a>
+    <a href="#">Help Desk</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="background-color:  rgb(26, 37, 55); padding-top: 30px;">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+    <nav>
+        <a href="https://www.upesacmw.org/"><img src="upesWhite.png" class="logo"></a>
+        <div class="menu-toggle">
+            <div class="hamburger" style="transition: 1s ease-in-out;"></div>
+        </div>
+        <div class="navbar-links">
+            <a class="navbarlink" href="#About">About</a>
+            <a class="navbarlink" href="#Events">Events</a>
+            <a class="navbarlink" href="#Sponsors">Sponsors</a>
+            <a class="navbarlink" href="#">Help Desk</a>
+        </div>
+        <a href="https://www.upesacmw.org/"><img src="acmacm_w.png" class="logo2"></a>
+    </nav>
+    </div>
+    <div style="position: relative;">
+        <div style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); z-index: 2; color: white; text-align: center;">
+            <img src="prodigy_logo.png" alt="progy" style="width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;">
+            <div style=" padding-top: 100px;">
+                <div class="countdown">
+
+                <div class="countdown-block">
+                    <span class="days time-elem">
+                    <span class="top">00</span>
+                    <span class="top-back">
+                        <span>00</span>
+                    </span>
+                    <span class="bottom">00</span>
+                    <span class="bottom-back">
+                        <span>00</span>
+                    </span>
+                    </span>
+                    <span class="title">Days</span>
+                </div>
+                
+            
+                <div class="countdown-block">
+                    <span class="hours time-elem">
+                    <span class="top">00</span>
+                    <span class="top-back">
+                        <span>00</span>
+                    </span>
+                    <span class="bottom">00</span>
+                    <span class="bottom-back">
+                        <span>00</span>
+                    </span>
+                    </span>
+                    <span class="title">Hours</span>
+                </div>
+                
+                <div class="countdown-block">
+                    <span class="minutes time-elem">
+                    <span class="top">00</span>
+                    <span class="top-back">
+                        <span>00</span>
+                    </span>
+                    <span class="bottom">00</span>
+                    <span class="bottom-back">
+                        <span>00</span>
+                    </span>
+                    </span>
+                    <span class="title">Minutes</span>
+                </div>
+            
+                <div class="countdown-block">
+                    <span class="seconds time-elem">
+                    <span class="top">00</span>
+                    <span class="top-back">
+                        <span>00</span>
+                    </span>
+                    <span class="bottom">00</span>
+                    <span class="bottom-back">
+                        <span>00</span>
+                    </span>
+                    </span>
+                    <span class="title">Seconds</span>
+                </div>
+
+                </div>
+            </div>
+            <div ><button class="register">Register Here</button></div>
+            <!-- <p style="margin-top: 10px; color:#1a2537; font-size: 50px;" id="demo"></p> -->
+        </div>
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true" style="margin: 0 0px 0px; z-index: 1; overflow: hidden;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div style="height: 90vh; position: relative; display: flex;">
+                        <img src="carou2.JPG" class="d-block w-100" alt="..." style="opacity: 0.5;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="height: 90vh; position: relative;">
+                        <img src="carou2.JPG" class="d-block w-100" alt="..." style="opacity: 0.5;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="height: 90vh; position: relative;">
+                        <img src="carou2.JPG" class="d-block w-100" alt="..." style="opacity: 0.5;">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- About -->
+    <div class="content-container">
+    <div id="About" style="background-color: #e2e2e2;">
+        <div style=" border-radius: 140px;">
+            <!-- background-color: rgb(137, 137, 155); THIK -->
+            <div style="text-align: center; font-weight: bold; align-items: center;">
+                <h2 class="headings" style="padding-top: 50px;">About Us</h2>
+                <p class="aboutsection">When human intellect and technology unite in NEXUS, they triumph over complexities and champion sustainability. It's not just a theme for Prodigy'24; it's a grand unison of humans and technology, a celebration of intellect and innovation solving complex problems.</p>
+                <video height="400" autoplay>
+                    <source src="Theme_Reveal.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>   
+                <p class="aboutsection">NEXUS showcases the synergy of humans and technology for sustainability. The saying 'None of us is as smart as all of us' encapsulates the ethos of NEXUS, embracing the fusion of human brilliance and technology for common goals and sustainable solutions. But how does this fusion work? How can the blend of human prowess and technology help solve complex problems and sustain our world?
+                    <br><br>Join us on this extraordinary journey at Prodigy'24 and discover the boundless potential of Nexus. Are you ready to embrace the challenge and become a catalyst for positive change?
+                </p>
+            </div>
+         </div>
+    </div>
+
+    <!-- Events -->
+    <div style="background-color: #e2e2e2;">
+    <div id="Events" style=" border-radius: 140px;">
+        <!-- background-color: rgb(20, 14, 14); THIK -->
+        <div style="text-align: center; font-weight: bold; align-items: center;">
+            <h2 class="headings">Events</h2>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <section class="hero-section">
+            <div class="card-grid">
+                <a class="card" style="background-color: transparent; border: none;">
+                    <div>
+                        <div class="card__background"  style="background-image: url(POSTERS/Code_Nexus1.png)"></div>
+                        <div class="card__content">
+                            <h3 class="card__heading">Code Nexus</h3>
+                            <p style="color: white;" class="para">Attention coders! Dive into Code Nexus, a five-hour online 
+                                competition where you'll face increasingly difficult coding problems throughout the day.  The 
+                                best part? You can code in any language you're comfortable with!  Think fast, write accurately, 
+                                and show off your coding skills to conquer each challenge and win your share of a massive ₹18,000
+                                prize pool!
+                            </p>
+                            <button class="card_buttons">Register Here</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;">
+                <div class="card__background"  style="background-image: url(POSTERS/Bits_Bids.png)"></div>
+                <div class="card__content">
+                    <h3 class="card__heading">Bits and Bids</h3>
+                    <p style="color: white;" class="para">
+                        Bits and Bids, a coding competition brought to you by UPES ACM and ACM-W Student Chapters, 
+                        throws down the gauntlet.  Sharpen your skills with a challenging quiz that unlocks bidding 
+                        power for the main event: an epic coding showdown!  Here, you'll strategically use points 
+                        earned in the quiz to bid on various coding challenges, putting your skills to the test and 
+                        vying for awesome prizes. Don't miss this chance to prove your coding prowess and claim victory!
+                    </p>
+                    <button class="card_buttons">Register Here</button>
+                </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;">
+                <div class="card__background"  style="background-image: url(POSTERS/UNEARTH_UTOPIA.png)"></div>
+                <div class="card__content">
+                    
+                    <h3 class="card__heading">Unearth Utopia</h3>
+                    <p style="color: white;" class="para">
+                        Ready to unleash your inner explorer? Join the adventure of a lifetime at Prodigy'24, 
+                        presented by UPES ACM and ACM-W Student Chapters! Dive into the thrill of Unearth Utopia, 
+                        our exhilarating treasure hunt event showcasing sustainability and nature's beauty on campus.
+                         With prizes worth 18000 up for grabs, gather your squad of 3 or 4 and set forth on an unforgettable 
+                         journey.  Don't miss out! Register now and let the exploration begin!
+                    </p>
+                    <button class="card_buttons">Register Here</button>
+                </div>
+                </li>
+                <a class="card" style="background-color: transparent; border: none;">
+                <div class="card__background"  style="background-image: url(POSTERS/LENSLORE_NEW.png)"></div>
+                <div class="card__content">
+                    <h3 class="card__heading">LensLore</h3>
+                    <p style="color: white;" class="para">
+                        Embark on an enchanting journey with Lenslore! This exciting event will unfold across three dynamic 
+                        rounds. In Round 1, participants will unleash their creativity by capturing the blend of technology, 
+                        humanity, and nature in a single photograph. Progressing to Round 2, participants will dive into a 
+                        storytelling adventure with a captivating series of three photographs. Round 3 will bring it all 
+                        together, challenging participants to showcase real-world solutions through compelling videos. 
+                        Throughout this experience, your creativity and originality will be the key factors judged. 
+                        Join us as the lens unveils a captivating world where technology, humanity, and nature converge 
+                        in harmony.
+                    </p>
+                    <button class="card_buttons">Register Here</button>
+                </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;">
+                    <div class="card__background"  style="background-image: url(POSTERS/VAAD_VIVAD.png)"></div>
+                    <div class="card__content">
+                        
+                        <h3 class="card__heading">Vaad Vivaad 2.0</h3>
+                        <p style="color: white;" class="para">
+                            Calling all brainiacs! Join Vaad-Vivaad 2.0 by UPES ACM and ACM-W Student Chapters. 
+                            Collaborate in group discussions, battle it out in fiery debates, and unleash your wit in 
+                            the extempore round. This is your chance to showcase your thinking skills, teamwork, and 
+                            spontaneous brilliance - don't miss out!
+                        </p>
+                        <button class="card_buttons" onclick="location.href = 'https://konfhub.com/vv-2-0';">Register Here</button>
+                    </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;">
+                    <div class="card__background"  style="background-image: url(POSTERS/metamorphosis.png)"></div>
+                    <div class="card__content">
+                        
+                        <h3 class="card__heading">Metamorphosis</h3>
+                        <p style="color: white;" class="para">Attention artists! Calling all creative minds to Metamorphosis,
+                             a graphic story competition by UPES ACM and ACM-W Student Chapters.  This is your chance to unleash 
+                             your inner artist and transform your ideas into stunning graphic stories.  Push your artistic 
+                             boundaries - create bold visuals and captivating narratives to compete for the title of ultimate 
+                             masterpiece!  Sharpen your pencils, hone your skills, and get ready to showcase your creative genius
+                              - this artistic journey awaits!
+                        </p>
+                        <button class="card_buttons">Register Here</button>
+                        
+                    </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;">
+                    <div class="card__background"  style="background-image: url(POSTERS/Enviropreneur.png)"></div>
+                    <div class="card__content">
+                        
+                        <h3 class="card__heading">ENVIROPRENEUR</h3>
+                        <p style="color: white;" class="para">Got Eco-Brains? Prove It! 
+                            UPES ACM & ACM-W Student Chapters challenge you to "ENVIROPRENEUR"! Gear up for a Green Trivia Blitz, 
+                            testing eco-startup know-how. Then, solve real environmental puzzles, crafting game-changing solutions. 
+                            Impress with presentations or prototypes! Win ₹15,000 & become a green tech pioneer. ENVIROPRENEUR 
+                            isn't just a competition; it's your springboard to a greener future.
+                        </p>
+                        <button class="card_buttons">Register Here</button>
+
+                    </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;" >
+                    <div class="card__background"  style="background-image: url(POSTERS/dsp.png)"></div>
+                    <div class="card__content">
+                        
+                        <h3 class="card__heading">DSP</h3>
+                        <p style="color: white;" class="para">
+                            At the heart of Prodigy '24 lies the Distinguished Speaker Program, curated by UPES ACM and ACM-W Student Chapters. 
+                            To foster knowledge sharing, we bring to you an illuminating session with Mr. Samarjit Chakraborty from ACM India, 
+                            exploring the intricacies of Sustainable Computing. Join us online on April 11th at 8:30 PM, wherever you are.
+                            Experience the future unfold before your eyes, as we navigate towards a sustainable tomorrow, together.
+                        </p>
+                        <button class="card_buttons" onclick="location.href = 'https://konfhub.com/dsp-6b52fc5d';">Register Here</button>
+                        
+                    </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;">
+                    <div class="card__background" style="background-image: url(POSTERS/BGMI.png)"></div>
+                    <div class="card__content">
+                        <h3 class="card__heading">BGMI</h3>
+                        <p style="color: white;" class="para">
+                            Gear up for the ultimate showdown in Stellar Showdown: BGMI! Join forces with your squad of four 
+                            and plunge into the electrifying online battleground. The Erangel round will put your skills to 
+                            the test, narrowing down to the top 8 teams. Brace yourselves for adrenaline-fueled TDM skirmishes 
+                            in Round 2, culminating in the crowning of the ultimate champion! Stay tuned for the forthcoming 
+                            date and time announcement. Exciting prizes await - unleash your gaming prowess and conquer the 
+                            competition!
+                        </p>
+                        <button class="card_buttons" onclick="location.href = 'https://konfhub.com/ssb-459a4b58';">Register Here</button>
+                    </div>
+                </a>
+                <a class="card" style="visibility:hidden;" id="hidden">
+                    <div class="card__background" style="background-image: url(POSTERS/Valorant.png)"></div>
+                    <div class="card__content">
+                        <h3 class="card__heading">VALORANT</h3>
+                        <p style="color: white;" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium quisquam excepturi incidunt, fuga sint cumque culpa consequuntur porro et, est illum quia nam eum tempore natus, rem expedita molestias ipsum!</p>
+                        <button class="card_buttons">Register Here</button>
+                    </div>
+                </a>
+                <a class="card" style="background-color: transparent; border: none;">
+                    <div class="card__background" style="background-image: url(POSTERS/Valorant.png)"></div>
+                    <div class="card__content">
+                        <h3 class="card__heading">VALORANT</h3>
+                        <p style="color: white;" class="para">
+                            Gamers, lock and load! Prodigy'24 explodes onto the scene with Stellar Showdown: Valorant, a 
+                            nationwide tournament testing your skills and teamwork. The fiercest 5-person squads from across 
+                            India clash for a shot at the massive ₹21,000 prize pool. Sharpen your aim, strategize like a pro, 
+                            and dominate the battlefield. This is your chance to etch your name in Valorant history - do you
+                             have what it takes to become a legend? Don't miss Stellar Showdown: Valorant - the ultimate test 
+                             of Valorant mastery. Be there, or be left behind!
+                        </p>
+                        <button class="card_buttons" onclick="location.href = 'https://konfhub.com/ssv';">Register Here</button>
+                    </div>
+                </a>
+                <div>
+        </section>
+        </div>
+    </div>
+    </div>  
+</div>
+<!-- Our Sponsors -->
+<div style="background-color: #e2e2e2;">
+    <div style=" border-radius: 140px;">
+        <!-- THIK background-color: a wdjahw; -->
+        <h2 style="text-align: center;" id="Sponsors" class="headings">Our Sponsors</h2>
+        <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center;">
+            <div style="display: flex; justify-content: space-around;">
+                <img src="Sponsors/codingninja.jpg" alt="sponsor1"  class="Sponsors">
+                <img src="Sponsors/codingninja.jpg" alt="sponsor1"  class="Sponsors">
+            </div>
+            <div style="display: flex; justify-content: space-around;">
+                <img src="Sponsors/codingninja.jpg" alt="sponsor1"  class="Sponsors">
+                <img src="Sponsors/codingninja.jpg" alt="sponsor1"  class="Sponsors">
+            </div>
+            <div style="display: flex; justify-content: space-around;">
+                <img src="Sponsors/codingninja.jpg" alt="sponsor1"  class="Sponsors">
+                <img src="Sponsors/codingninja.jpg" alt="sponsor1"  class="Sponsors">
+            </div>
+        </div>
+</div>
+<!-- footer -->
+  <footer class="footer" style="margin-top: 200px;" >
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    
+    
+    <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; align-items: center;">
+            <img class="footerlogo" src="acmwhite.png" style="
+            object-fit: contain;">
+            <ul class="social-icon" style="margin: 0; padding: 0;">
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/company/upesacm/">
+                    <ion-icon  class="ion-iconleft" name="logo-linkedin"></ion-icon>
+                </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/upesacm/">
+                    <ion-icon  class="ion-iconleft" name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <ul class="social-icon" style="margin: 0;">
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/upesacm/">
+                    <ion-icon class="ion-iconright" name="logo-instagram"></ion-icon>
+                </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/company/upesacm/">
+                    <ion-icon  class="ion-iconright" name="logo-linkedin"></ion-icon>
+                </a></li>
+            </ul>
+            <img class="footerlogo2" src="acm_wwhite.png" style="
+            object-fit: contain;">
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column;" >
+        <ul class="menu" style="padding: 0;">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#About">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="https://www.upesacmw.org/team.html">Team</a></li>
+            <li class="menu__item"><a class="menu__link" href="https://www.upesacmw.org/contact.html">Contact</a></li>
+          </ul>
+          <p style="text-align: center;" class="footerteam">&copy;2024 Technical Team | All Rights Reserved</p>
+    </div>
+   
+  </footer>
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
